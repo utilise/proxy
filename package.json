@@ -14,7 +14,7 @@
     "istanbul": "^0.3.13",
     "mocha": "^2.2.4",
     "mocha-lcov-reporter": "0.0.2",
-    "wrap": "git://github.com/utilise/wrap"
+    "wrap": "git+https://github.com/utilise/wrap.git"
   },
   "dependencies": {
     "is": "git+https://github.com/utilise/is.git"
