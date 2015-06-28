@@ -1,4 +1,5 @@
 var expect = require('chai').expect
+  , wrap = require('wrap')
   , proxy = require('./')
 
 describe('proxy', function() {
@@ -10,12 +11,16 @@ describe('proxy', function() {
     var fn = function(){ result = this }
       , result
 
-    proxy(fn, {'foo':1})('bar')
+    proxy(fn, 0, {'foo':1})('bar')
     expect(result).to.eql({'foo':1})
   })
 
   it('should proxy function with different return value', function() {
-    expect(proxy(String, 0, 'foo')('bar')).to.equal('foo')
+    expect(proxy(String, 'foo')('bar')).to.equal('foo')
+  })
+
+  it('should proxy function with functional return value', function() {
+    expect(proxy(String, wrap('baz'))('bar')).to.equal('baz')
   })
 
 })

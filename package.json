@@ -13,6 +13,10 @@
     "coveralls": "^2.11.2",
     "istanbul": "^0.3.13",
     "mocha": "^2.2.4",
-    "mocha-lcov-reporter": "0.0.2"
+    "mocha-lcov-reporter": "0.0.2",
+    "wrap": "git://github.com/utilise/wrap"
+  },
+  "dependencies": {
+    "is": "git+https://github.com/utilise/is.git"
   }
 }

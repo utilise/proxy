@@ -1,6 +1,8 @@
-module.exports = function proxy(fn, ctx, ret){ 
+var is = require('is')
+
+module.exports = function proxy(fn, ret, ctx){ 
   return function(){
     var result = fn.apply(ctx || this, arguments)
-    return ret || result
+    return is.fn(ret) ? ret(result) : ret || result
   }
 }
