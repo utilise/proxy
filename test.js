@@ -1,5 +1,5 @@
 var expect = require('chai').expect
-  , wrap = require('wrap')
+  , wrap = require('utilise.wrap')
   , proxy = require('./')
 
 describe('proxy', function() {

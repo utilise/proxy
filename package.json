@@ -1,5 +1,5 @@
 {
-  "name": "proxy",
+  "name": "utilise.proxy",
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
@@ -14,9 +14,9 @@
     "istanbul": "^0.3.13",
     "mocha": "^2.2.4",
     "mocha-lcov-reporter": "0.0.2",
-    "wrap": "git+https://github.com/utilise/wrap.git"
+    "utilise.wrap": "*"
   },
   "dependencies": {
-    "is": "git+https://github.com/utilise/is.git"
+    "utilise.is": "*"
   }
 }
