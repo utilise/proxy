@@ -23,4 +23,12 @@ describe('proxy', function() {
     expect(proxy(String, wrap('baz'))('bar')).to.equal('baz')
   })
 
+  it('should proxy function with same context', function() {
+    var fn = function(){ result = this }
+      , result
+
+    proxy(String, fn).call({ foo: 'bar' })
+    expect(result).to.eql({ foo: 'bar' })
+  })
+
 })
