@@ -17,6 +17,7 @@
     "utilise.wrap": "*"
   },
   "dependencies": {
+    "utilise.identity": "*",
     "utilise.is": "*"
   }
 }

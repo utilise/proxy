@@ -31,4 +31,9 @@ describe('proxy', function() {
     expect(result).to.eql({ foo: 'bar' })
   })
 
+  it('should proceed gracefully if fn undefined', function(){
+    var fn = function(d){ return d }
+    expect(proxy(undefined, fn)('bar')).to.eql('bar')
+  })
+
 })
